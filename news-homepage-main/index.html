@@ -67,17 +67,35 @@
       .content-warp:nth-child(2) p {
         margin: 0;
         font-size: 20px;
-        color: #c7c7c7;
+        color: #8f8f8f;
       }
       .content-warp-copy {
         position: relative;
       }
       .content-warp-btn a {
+        display: block;
         position: absolute;
         bottom: 0;
         left: 0;
         padding: 16px 32px;
         background-color: hsl(5, 85%, 63%);
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.3rem;
+        margin: 0 auto;
+        transition: 1s;
+      }
+      .content-warp-btn a:hover {
+        transition: 1s;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px 32px;
+        background-color: hsl(229, 85%, 63%);
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
@@ -102,22 +120,30 @@
         color: #fff;
       }
       .new-content-copy {
-        color: #c7c7c7;
+        color: #8f8f8f;
         line-height: 24px;
       }
       .ranking-content {
         margin-top: 64px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 32px;
       }
       .ranking-content-warp {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         align-items: center;
       }
-      .ranking-content-warp img {
-        width: 30%;
-        height: unset;
+      .ranking-content-img-box {
+        overflow: hidden;
+      }
+      .ranking-content-img {
+        width: 100%;
+        height: auto;
+      }
+      .ranking-content-img:hover {
+        transform: scale(1.2);
+        transition: 1s;
       }
       .ranking-content-warp-block {
         height: 100%;
@@ -129,15 +155,17 @@
       .ranking-content-warp-block span {
         font-size: 40px;
         font-weight: 700;
-        color: #c7c7c7;
+        color: #8f8f8f;
       }
       .ranking-content-warp-title {
         font-size: 20px;
+        margin: 0;
       }
       .ranking-content-warp-copy {
         margin: 0;
         line-height: 24px;
         font-size: 15px;
+        color: #8f8f8f;
       }
       .attribution {
         margin-top: 32px;
@@ -209,7 +237,12 @@
 
       <div class="ranking-content">
         <div class="ranking-content-warp">
-          <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+          <div class="ranking-content-img-box">
+            <img
+              class="ranking-content-img"
+              src="./assets/images/image-retro-pcs.jpg"
+              alt="" />
+          </div>
           <div class="ranking-content-warp-block">
             <span>01</span>
             <h2 class="ranking-content-warp-title">Reviving Retro PCs</h2>
@@ -219,7 +252,12 @@
           </div>
         </div>
         <div class="ranking-content-warp">
-          <img src="./assets/images/image-top-laptops.jpg" alt="" />
+          <div class="ranking-content-img-box">
+            <img
+              class="ranking-content-img"
+              src="./assets/images/image-top-laptops.jpg"
+              alt="" />
+          </div>
           <div class="ranking-content-warp-block">
             <span>02</span>
             <h2 class="ranking-content-warp-title">Top 10 Laptops of 2022</h2>
@@ -229,7 +267,12 @@
           </div>
         </div>
         <div class="ranking-content-warp">
-          <img src="./assets/images/image-gaming-growth.jpg" alt="" />
+          <div class="ranking-content-img-box">
+            <img
+              class="ranking-content-img"
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="" />
+          </div>
           <div class="ranking-content-warp-block">
             <span>03</span>
             <h2 class="ranking-content-warp-title">The Growth of Gaming</h2>
