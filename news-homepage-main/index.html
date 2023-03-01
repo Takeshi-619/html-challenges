@@ -10,12 +10,137 @@
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet" />
 
     <title>Frontend Mentor | News homepage</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      body {
+        margin: 64px;
+        font-family: "Noto sans JP";
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+      }
+
+      .gnav-ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .gnav-ul li {
+        list-style: none;
+        margin: 0 24px;
+      }
+      .warp {
+        display: flex;
+        column-gap: 32px;
+      }
+      .warper {
+        width: 100%;
+      }
+      .warper img {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      .content-warp {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+      }
+      .content-warp h1 {
+        line-height: 72px;
+        font-size: 64px;
+        font-weight: 900;
+        margin: 0;
+        width: 90%;
+      }
+      .content-warp:nth-child(2) {
+        line-height: 30px;
+      }
+      .content-warp:nth-child(2) p {
+        margin: 0;
+        font-size: 20px;
+        color: #c7c7c7;
+      }
+      .content-warp-copy {
+        position: relative;
+      }
+      .content-warp-btn a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px 32px;
+        background-color: hsl(5, 85%, 63%);
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.3rem;
+        margin: 0 auto;
+      }
+      .new-content {
+        background-color: #000;
+        padding: 32px;
+      }
+      .new-content h2 {
+        margin: 0;
+        font-size: 40px;
+        color: hsl(35, 77%, 62%);
+      }
+      .new-content-warp {
+        padding: 16px 0;
+      }
+      .new-content-title {
+        color: #fff;
+      }
+      .new-content-copy {
+        color: #c7c7c7;
+        line-height: 24px;
+      }
+      .ranking-content {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .ranking-content-warp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .ranking-content-warp img {
+        width: 30%;
+        height: unset;
+      }
+      .ranking-content-warp-block {
+        height: 100%;
+        margin-left: 16px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      .ranking-content-warp-block span {
+        font-size: 40px;
+        font-weight: 700;
+        color: #c7c7c7;
+      }
+      .ranking-content-warp-title {
+        font-size: 20px;
+      }
+      .ranking-content-warp-copy {
+        margin: 0;
+        line-height: 24px;
+        font-size: 15px;
+      }
       .attribution {
+        margin-top: 32px;
         font-size: 11px;
         text-align: center;
       }
@@ -25,7 +150,7 @@
     </style>
   </head>
   <body>
-    <hedaer>
+    <header>
       <img src="./assets/images/logo.svg" alt="logo" />
       <nav>
         <ul class="gnav-ul">
@@ -36,55 +161,82 @@
           <li>Categories</li>
         </ul>
       </nav>
-    </hedaer>
+    </header>
     <main>
-      <h1>The Bright Future of Web 3.0?</h1>
-      <p>
-        We dive into the next evolution of the web that claims to put the power
-        of the platforms back into the hands of the people. But is it really
-        fulfilling its promise?
-      </p>
-      <button>Read more</button>
-      <aside>
-        <section>
-          <h2>New</h2>
-          <section>
-            <h3>Hydrogen VS Electric Cars</h3>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+      <div class="warp">
+        <div class="warper">
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+          <section class="content-warp">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div class="content-warp-copy">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <div class="content-warp-btn"><a href="#">Read more</a></div>
+            </div>
           </section>
-          <section>
-            <h3>The Downsides of AI Artistry</h3>
-            <p>
-              What are the possible adverse effects of on-demand AI image
-              generation?
-            </p>
+        </div>
+        <aside>
+          <section class="new-content">
+            <h2>New</h2>
+            <section class="new-content-warp">
+              <h3 class="new-content-title">Hydrogen VS Electric Cars</h3>
+              <p class="new-content-copy">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </section>
+            <hr />
+            <section class="new-content-warp">
+              <h3 class="new-content-title">The Downsides of AI Artistry</h3>
+              <p class="new-content-copy">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </section>
+            <hr />
+            <section class="new-content-warp">
+              <h3 class="new-content-title">Is VC Funding Drying Up?</h3>
+              <p class="new-content-copy">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </section>
           </section>
-          <section>
-            <h3>Is VC Funding Drying Up?</h3>
-            <p>
-              Private funding by VC firms is down 50% YOY. We take a look at
-              what that means.
-            </p>
-          </section>
-        </section>
-      </aside>
+        </aside>
+      </div>
 
-      <div>
-        <div>
-          img
-          <span> 01</span>
-          <h2>Reviving Retro PCs</h2>
-          <p>What happens when old PCs are given modern upgrades?</p>
+      <div class="ranking-content">
+        <div class="ranking-content-warp">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+          <div class="ranking-content-warp-block">
+            <span>01</span>
+            <h2 class="ranking-content-warp-title">Reviving Retro PCs</h2>
+            <p class="ranking-content-warp-copy">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
         </div>
-        <div>
-          <span>02</span>
-          <h2>Top 10 Laptops of 2022</h2>
-          <p>Our best picks for various needs and budgets.</p>
+        <div class="ranking-content-warp">
+          <img src="./assets/images/image-top-laptops.jpg" alt="" />
+          <div class="ranking-content-warp-block">
+            <span>02</span>
+            <h2 class="ranking-content-warp-title">Top 10 Laptops of 2022</h2>
+            <p class="ranking-content-warp-copy">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
         </div>
-        <div>
-          <span>03</span>
-          <h2>The Growth of Gaming</h2>
-          <p>How the pandemic has sparked fresh opportunities.</p>
+        <div class="ranking-content-warp">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="" />
+          <div class="ranking-content-warp-block">
+            <span>03</span>
+            <h2 class="ranking-content-warp-title">The Growth of Gaming</h2>
+            <p class="ranking-content-warp-copy">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -93,7 +245,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/Takeshi-619">Takeshi Aoki</a>.
     </div>
   </body>
 </html>
