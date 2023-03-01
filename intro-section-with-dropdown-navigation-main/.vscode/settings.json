@@ -1,0 +1,11 @@
+{
+  "editor.indentSize": "tabSize",
+  "liveSassCompile.settings.formats": [
+    // This is Default.
+    {
+      "format": "expanded",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ]
+}
