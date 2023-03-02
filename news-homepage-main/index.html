@@ -110,7 +110,7 @@
         margin: 0 auto;
       }
       .new-content {
-        background-color: #000;
+        background-color: hsl(218, 44%, 22%);
         padding: 3vw;
       }
       .new-content h2 {
@@ -126,9 +126,10 @@
         font-size: 2.4vh;
       }
       .new-content-copy {
-        color: #8f8f8f;
+        color: #fff;
         line-height: 3vh;
         font-size: 1.4vh;
+        font-weight: lighter;
       }
       .ranking-content {
         margin-top: 64px;
@@ -182,6 +183,52 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      @media screen and (max-width: 768px) {
+        body {
+          margin: 4vw;
+        }
+        .warp {
+          display: block;
+        }
+        .content-warp {
+          display: block;
+        }
+        .warper {
+          margin-bottom: 12vw;
+        }
+        .content-warp h1 {
+          font-size: 9vw;
+          width: 80vw;
+          line-height: 9vw;
+        }
+        .content-warp:nth-child(2) {
+          line-height: 5vw;
+        }
+        .content-warp:nth-child(2) p {
+          margin: 4vw 0;
+          font-size: 3.2vw;
+          color: #8f8f8f;
+        }
+        .content-warp-btn {
+          position: relative;
+          padding: 6vw 0;
+        }
+        .content-warp-btn a {
+          padding: 3vw 6vw;
+          font-size: 3.5vw;
+        }
+        .new-content h2 {
+          font-size: 8vw;
+        }
+        .new-content-title {
+          margin: 0;
+        }
+        .new-content-copy {
+          font-size: 4vw;
+          margin: 2vw 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -200,7 +247,13 @@
     <main>
       <div class="warp">
         <div class="warper">
-          <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./assets/images/image-web-3-mobile.jpg"
+              type="image/jpg" />
+            <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+          </picture>
           <section class="content-warp">
             <h1>The Bright Future of Web 3.0?</h1>
             <div class="content-warp-copy">
