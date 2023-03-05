@@ -372,7 +372,7 @@ th {
 }
 
 body {
-  margin: 32px;
+  margin: 1vw;
 }
 
 header {
@@ -382,14 +382,14 @@ header {
 }
 header .gnav {
   display: flex;
-  column-gap: 32px;
+  column-gap: 2vw;
 }
 header .gnav_warpper {
   display: flex;
   align-items: center;
 }
 header .gnav_warpper li {
-  margin: 0 24px;
+  margin: 0 2vw;
 }
 header .gnav_warpper_child {
   position: relative;
@@ -411,7 +411,7 @@ header .gnav_warpper a {
 header .user_nav {
   display: flex;
   align-items: center;
-  column-gap: 32px;
+  column-gap: 3vw;
 }
 header .user_nav a {
   color: hsl(0, 0%, 41%);
@@ -423,12 +423,12 @@ header .user_nav_last {
 }
 
 .main_content {
-  margin: 64px auto;
+  margin: 1vw auto;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
-  column-gap: 64px;
+  column-gap: 2vw;
 }
 .main_content_section {
   height: 70%;
@@ -455,7 +455,7 @@ header .user_nav_last {
   color: hsl(0, 0%, 41%);
 }
 .main_content_section_warp_leanMore a {
-  padding: 24px 32px;
+  padding: 24px 4vw;
   background-color: #000;
   border-radius: 12px;
   color: #fff;
@@ -463,10 +463,10 @@ header .user_nav_last {
   font-weight: 700;
 }
 .main_content_section_client {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   align-items: center;
-  column-gap: 32px;
+  justify-content: space-around;
+  column-gap: 4vw;
 }
 .main_content_section_firstVeiw img {
   width: 100%;

@@ -1,12 +1,15 @@
 @use "../../node_modules/destyle.css/destyle.css";
 $border-padding: 8px 16px;
 $radius: 12px;
-$m1: 64px;
-$m2: 32px;
+$v1: 1vw;
+$v2: 2vw;
+$v3: 3vw;
+$v4: 4vw;
+$v5: 5vw;
 $gray: hsl(0, 0%, 41%);
 
 body {
-  margin: $m2;
+  margin: $v1;
 }
 
 header {
@@ -15,12 +18,12 @@ header {
   justify-content: space-between;
   .gnav {
     display: flex;
-    column-gap: $m2;
+    column-gap: $v2;
     &_warpper {
       display: flex;
       align-items: center;
       li {
-        margin: 0 24px;
+        margin: 0 $v2;
       }
       &_child {
         position: relative;
@@ -44,7 +47,7 @@ header {
   .user_nav {
     display: flex;
     align-items: center;
-    column-gap: $m2;
+    column-gap: $v3;
     a {
       color: $gray;
     }
@@ -57,12 +60,12 @@ header {
 }
 
 .main_content {
-  margin: $m1 auto;
+  margin: $v1 auto;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
-  column-gap: $m1;
+  column-gap: $v2;
   &_section {
     height: 70%;
     display: flex;
@@ -87,7 +90,7 @@ header {
       }
       &_leanMore {
         a {
-          padding: 24px $m2;
+          padding: 24px $v4;
           background-color: #000;
           border-radius: $radius;
           color: #fff;
@@ -97,10 +100,11 @@ header {
       }
     }
     &_client {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      display: flex;
+      // grid-template-columns: 1fr 1fr 1fr 1fr;
       align-items: center;
-      column-gap: $m2;
+      justify-content: space-around;
+      column-gap: $v4;
     }
     &_firstVeiw {
       img {
