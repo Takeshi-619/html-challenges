@@ -430,18 +430,28 @@ header .user_nav_last {
   align-items: end;
   column-gap: 64px;
 }
+.main_content_section {
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  row-gap: 8vw;
+}
 .main_content_section_warp {
-  margin: 96px 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5vw;
 }
 .main_content_section_warp_copy {
-  font-size: 64px;
+  font-size: 5vw;
   font-family: "Noto sans JP";
-  font-weight: 900;
+  font-weight: 700;
+  margin: 0;
 }
 .main_content_section_warp_letter {
   width: 80%;
   line-height: 24px;
-  margin: 64px 0;
   color: hsl(0, 0%, 41%);
 }
 .main_content_section_warp_leanMore a {
