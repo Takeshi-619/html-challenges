@@ -430,6 +430,12 @@ header .user_nav_last {
   align-items: end;
   column-gap: 2vw;
 }
+@media screen and (max-width: 1020px) {
+  .main_content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
 .main_content_section {
   height: 70%;
   display: flex;
@@ -444,15 +450,29 @@ header .user_nav_last {
   row-gap: 5vw;
 }
 .main_content_section_warp_copy {
+  width: 40vw;
   font-size: 5vw;
   font-family: "Noto sans JP";
   font-weight: 700;
   margin: 0;
 }
+@media screen and (max-width: 1020px) {
+  .main_content_section_warp_copy {
+    width: 100%;
+    font-size: 8vw;
+    text-align: center;
+  }
+}
 .main_content_section_warp_letter {
   width: 80%;
   line-height: 24px;
   color: hsl(0, 0%, 41%);
+}
+@media screen and (max-width: 1020px) {
+  .main_content_section_warp_letter {
+    text-align: center;
+    width: 80vw;
+  }
 }
 .main_content_section_warp_leanMore a {
   padding: 24px 4vw;

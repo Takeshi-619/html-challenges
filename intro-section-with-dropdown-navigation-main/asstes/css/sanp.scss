@@ -1,15 +1,25 @@
 @use "../../node_modules/destyle.css/destyle.css";
 $border-padding: 8px 16px;
 $radius: 12px;
-$v1: 1vw;
-$v2: 2vw;
-$v3: 3vw;
-$v4: 4vw;
-$v5: 5vw;
 $gray: hsl(0, 0%, 41%);
 
+$sp: 767px;
+
+$tab: 1020px;
+
+@mixin mobile {
+  @media screen and (max-width: $sp) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: $tab) {
+    @content;
+  }
+}
+
 body {
-  margin: $v1;
+  margin: 1vw;
 }
 
 header {
@@ -18,12 +28,12 @@ header {
   justify-content: space-between;
   .gnav {
     display: flex;
-    column-gap: $v2;
+    column-gap: 2vw;
     &_warpper {
       display: flex;
       align-items: center;
       li {
-        margin: 0 $v2;
+        margin: 0 2vw;
       }
       &_child {
         position: relative;
@@ -47,7 +57,7 @@ header {
   .user_nav {
     display: flex;
     align-items: center;
-    column-gap: $v3;
+    column-gap: 3vw;
     a {
       color: $gray;
     }
@@ -60,12 +70,16 @@ header {
 }
 
 .main_content {
-  margin: $v1 auto;
+  margin: 1vw auto;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
-  column-gap: $v2;
+  column-gap: 2vw;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
   &_section {
     height: 70%;
     display: flex;
@@ -78,19 +92,29 @@ header {
       flex-wrap: wrap;
       row-gap: 5vw;
       &_copy {
+        width: 40vw;
         font-size: 5vw;
         font-family: "Noto sans JP";
         font-weight: 700;
         margin: 0;
+        @include tab {
+          width: 100%;
+          font-size: 8vw;
+          text-align: center;
+        }
       }
       &_letter {
         width: 80%;
         line-height: 24px;
         color: $gray;
+        @include tab {
+          text-align: center;
+          width: 80vw;
+        }
       }
       &_leanMore {
         a {
-          padding: 24px $v4;
+          padding: 24px 4vw;
           background-color: #000;
           border-radius: $radius;
           color: #fff;
@@ -101,10 +125,9 @@ header {
     }
     &_client {
       display: flex;
-      // grid-template-columns: 1fr 1fr 1fr 1fr;
       align-items: center;
       justify-content: space-around;
-      column-gap: $v4;
+      column-gap: 4vw;
     }
     &_firstVeiw {
       img {
